@@ -308,9 +308,11 @@ const VISUALS = {
   chicha_love:     { fallback: <Chicha vase="#7a1a2a" liquid="#3a0a15" accent="#C9A84C" />, deco: "🍓" },
   chicha_hawoienne:{ fallback: <Chicha vase="#1a4a6a" liquid="#0a2a4a" accent="#C9A84C" />, deco: "🍍" },
   chicha_mi_amor:  { fallback: <Chicha vase="#a02030" liquid="#5a0a15" accent="#C9A84C" />, deco: "🍎" },
-  chicha_menthe:   { fallback: <Chicha vase="#1a4a3a" liquid="#0a2a1a" accent="#C9A84C" />, deco: "🌿" },
-  chicha_aeske:    { fallback: <Chicha vase="#6a4a1a" liquid="#3a2a0a" accent="#E5C76B" />, deco: "✨" },
-  chicha_fruits:   { fallback: <Chicha vase="#5a2a4a" liquid="#3a1a2a" accent="#C9A84C" />, deco: "🍇" },
+  chicha_menthe:        { fallback: <Chicha vase="#2a6a4a" liquid="#0f3a25" accent="#C9A84C" />, deco: "🌿" },
+  chicha_menthe_mastic: { fallback: <Chicha vase="#1a4a3a" liquid="#0a2a1a" accent="#C9A84C" />, deco: "🌿" },
+  chicha_pomme:         { fallback: <Chicha vase="#3a7a2a" liquid="#1a4a15" accent="#C9A84C" />, deco: "🍏" },
+  chicha_aeske:         { fallback: <Chicha vase="#6a4a1a" liquid="#3a2a0a" accent="#E5C76B" />, deco: "✨" },
+  chicha_fruits:        { fallback: <Chicha vase="#5a2a4a" liquid="#3a1a2a" accent="#C9A84C" />, deco: "🍇" },
   eau:       { fallback: <WaterBottle />, deco: "" },
   cafe:      { fallback: <CoffeeCup />, deco: "" },
   the_vert:  { fallback: <TeaGlass />, deco: "" },
@@ -332,31 +334,33 @@ const VISUALS = {
 // ─────────────────────────────────────────────────────────────────────────────
 const MENU = {
   CHICHAS: [
-    { id: "chicha_reglisse", name: "Chicha Réglisse", price: 120 },
-    { id: "chicha_love", name: "Chicha Love", price: 100 },
-    { id: "chicha_hawoienne", name: "Chicha Hawoïenne", price: 100 },
-    { id: "chicha_mi_amor", name: "Chicha Mi Amor", price: 100 },
-    { id: "chicha_menthe", name: "Chicha Menthe Mastic", price: 70 },
-    { id: "chicha_aeske", name: "Chicha Aeske", price: 70 },
-    { id: "chicha_fruits", name: "Chicha Fruits", price: 100 },
+    { id: "chicha_reglisse",      name: "Chicha Réglisse",       name_ar: "شيشة عرق السوس",  price: 120 },
+    { id: "chicha_love",          name: "Chicha Love",           name_ar: "شيشة لوف",         price: 100 },
+    { id: "chicha_hawoienne",     name: "Chicha Hawoïenne",      name_ar: "شيشة هاواي",       price: 100 },
+    { id: "chicha_mi_amor",       name: "Chicha Mi Amor",        name_ar: "شيشة مي أمور",     price: 100 },
+    { id: "chicha_fruits",        name: "Chicha Fruits",         name_ar: "شيشة فواكه",       price: 100 },
+    { id: "chicha_menthe",        name: "Chicha Menthe",         name_ar: "شيشة نعناع",       price: 70  },
+    { id: "chicha_menthe_mastic", name: "Chicha Menthe Mastic",  name_ar: "شيشة نعناع مستيك", price: 70  },
+    { id: "chicha_pomme",         name: "Chicha Pomme",          name_ar: "شيشة تفاح",        price: 70  },
+    { id: "chicha_aeske",         name: "Chicha Arabe",          name_ar: "شيشة عربية",       price: 70  },
   ],
   BOISSONS: [
-    { id: "eau", name: "Eau", price: 20 },
-    { id: "cafe", name: "Café", price: 20 },
-    { id: "the_vert", name: "Thé vert", price: 20 },
-    { id: "theiere", name: "Théière", price: 25 },
-    { id: "limonade", name: "Limonade soda", price: 30 },
-    { id: "bio", name: "Bio", price: 30 },
-    { id: "sims", name: "Sims (jus)", price: 30 },
-    { id: "schweppes", name: "Schweppes", price: 30 },
-    { id: "wulmes", name: "Wulmes", price: 30 },
-    { id: "energie", name: "Énergie", price: 45 },
-    { id: "redbull", name: "Red Bull", price: 50 },
+    { id: "eau",       name: "Eau",           name_ar: "ماء",            price: 20 },
+    { id: "cafe",      name: "Café",          name_ar: "قهوة",           price: 20 },
+    { id: "the_vert",  name: "Thé vert",      name_ar: "شاي أخضر",       price: 20 },
+    { id: "theiere",   name: "Théière",       name_ar: "براد أتاي",      price: 25 },
+    { id: "limonade",  name: "Limonade soda", name_ar: "ليموناضة",       price: 30 },
+    { id: "bio",       name: "Bio",           name_ar: "عصير بيو",       price: 30 },
+    { id: "sims",      name: "Sims (jus)",    name_ar: "عصير سيمس",      price: 30 },
+    { id: "schweppes", name: "Schweppes",     name_ar: "شويبس",          price: 30 },
+    { id: "wulmes",    name: "Wulmes",        name_ar: "ولمز",           price: 30 },
+    { id: "energie",   name: "Énergie",       name_ar: "مشروب طاقة",     price: 45 },
+    { id: "redbull",   name: "Red Bull",      name_ar: "ريد بول",        price: 50 },
   ],
   COCKTAILS: [
-    { id: "mojito_royal", name: "Mojito Royal", price: 35, desc: "Menthe, citron, eau gazeuse" },
-    { id: "coucher_soleil", name: "Coucher de Soleil", price: 35, desc: "Jus d'orange, grenade, soda" },
-    { id: "plaisir_ete", name: "Plaisir d'Été", price: 35, desc: "Pêche, ananas, crème, glace" },
+    { id: "mojito_royal",   name: "Mojito Royal",      name_ar: "موهيتو رويال",  price: 35, desc: "Menthe, citron, eau gazeuse",       desc_ar: "نعناع، ليمون، ماء غازي" },
+    { id: "coucher_soleil", name: "Coucher de Soleil", name_ar: "غروب الشمس",    price: 35, desc: "Jus d'orange, grenade, soda",       desc_ar: "عصير برتقال، رمان، صودا" },
+    { id: "plaisir_ete",    name: "Plaisir d'Été",     name_ar: "متعة الصيف",    price: 35, desc: "Pêche, ananas, crème, glace",       desc_ar: "خوخ، أناناس، كريمة، مثلجات" },
   ],
 };
 
@@ -631,9 +635,14 @@ CHICHAS :
 - Chicha Love — 100 DH (parfum sucré, très populaire en couple)
 - Chicha Hawoïenne — 100 DH (ananas, fruits exotiques)
 - Chicha Mi Amor — 100 DH (pomme rouge)
-- Chicha Menthe Mastic — 70 DH (la classique marocaine)
-- Chicha Aeske — 70 DH (mélange artisanal maison)
 - Chicha Fruits — 100 DH (fruits rouges du moment)
+- Chicha Menthe — 70 DH (menthe fraîche, simple et rafraîchissante)
+- Chicha Menthe Mastic — 70 DH (la classique marocaine, menthe + mastic)
+- Chicha Pomme — 70 DH (pomme verte, fraîche et fruitée)
+- Chicha Arabe — 70 DH (mélange traditionnel arabe maison)
+
+NOMS EN ARABE (à utiliser quand le client parle arabe) :
+شيشة عرق السوس (Réglisse), شيشة لوف (Love), شيشة هاواي (Hawoïenne), شيشة مي أمور (Mi Amor), شيشة فواكه (Fruits), شيشة نعناع (Menthe), شيشة نعناع مستيك (Menthe Mastic), شيشة تفاح (Pomme), شيشة عربية (Arabe)
 
 BOISSONS :
 - Eau — 20 DH
@@ -1185,11 +1194,11 @@ Output ONLY the translated JSON object — no markdown fences, no explanation, n
                         {/* Texte */}
                         <div className="flex-1 min-w-0">
                           <h4 className="font-title text-sm font-semibold tracking-wider leading-tight" style={{ color: COLORS.text }}>
-                            {item.name}
+                            {lang === "ar" && item.name_ar ? item.name_ar : item.name}
                           </h4>
-                          {item.desc && (
+                          {(lang === "ar" ? item.desc_ar : item.desc) && (
                             <p className="text-[11px] mt-1 italic" style={{ color: COLORS.textDim }}>
-                              {item.desc}
+                              {lang === "ar" ? item.desc_ar : item.desc}
                             </p>
                           )}
                           <div className="flex items-baseline gap-1 mt-1.5">
